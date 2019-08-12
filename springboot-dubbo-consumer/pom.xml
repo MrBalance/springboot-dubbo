@@ -15,16 +15,19 @@
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
+        <!--web依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--测试依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!--api接口依赖-->
         <dependency>
             <groupId>com.balance</groupId>
@@ -51,6 +54,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
+
         <!--用于编译jsp-->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -60,6 +64,7 @@
     </dependencies>
 
     <build>
+        <!--防止idea中maping层中的xml和web资源无法打入target包中-->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
