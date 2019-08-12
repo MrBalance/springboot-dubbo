@@ -3,11 +3,8 @@ package com.balance.testService;
 import com.balance.SpringbootDubboServiceApplicationTests;
 import com.balance.service.UsrTableService;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,11 +22,11 @@ public class TestService  extends SpringbootDubboServiceApplicationTests{
     RedisTemplate<String,String> redisTemplate;
 
     @Test
-    public void isloginTest(){
+    public void isLoginTest(){
         Map<String,Object> map = new HashMap<>();
         map.put("account","admin");
         map.put("password","123456");
-        String loginInfo = usrTableService.islogin(map);
+        String loginInfo = usrTableService.isLogin(map);
         System.out.println(loginInfo);
     }
 

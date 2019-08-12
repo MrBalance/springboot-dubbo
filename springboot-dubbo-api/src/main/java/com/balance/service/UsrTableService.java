@@ -21,7 +21,7 @@ public interface UsrTableService {
       * @return: String 返回异常文字描述，0表示正常
       * @Date: 2019/6/11 - 9:23
       */
-    public String islogin(Map<String, Object> map);
+    public String isLogin(Map<String, Object> map);
     
      /**
       * @Author: 杜云章

@@ -26,7 +26,7 @@ public class UsrTableController {
     @ResponseBody
     public String login(@RequestParam Map<String, Object> map){
         log.info("进入UsrTableController.login()方法");
-        String isloginInfo = usrTableService.islogin(map);
+        String isloginInfo = usrTableService.isLogin(map);
         log.info("执行结果：" + isloginInfo);
         return isloginInfo;
     }

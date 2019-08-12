@@ -74,7 +74,7 @@ public class UsrTableServiceImpl implements UsrTableService {
     }
 
     @Override
-    public String islogin(Map<String, Object> map) {
+    public String isLogin(Map<String, Object> map) {
         if(checkLogin(map)){
             redisTemplate.opsForHash().putAll("loginInfo", map);
             log.info("成功登录");
