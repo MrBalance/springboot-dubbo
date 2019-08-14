@@ -30,5 +30,5 @@ public interface UsrTableService {
       * @return: UsrTable
       * @Date: 2019/6/13 - 16:40
       */
-    public UsrTable getCurrentUsr();
+    public UsrTable getCurrentUsr() throws Exception;
 }
