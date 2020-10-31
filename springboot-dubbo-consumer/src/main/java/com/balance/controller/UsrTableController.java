@@ -1,8 +1,8 @@
 package com.balance.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.balance.model.UsrTable;
 import com.balance.service.UsrTableService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author: 杜云章
- * @description:
- * @Date: 2019-06-11 18:23
+ * @author 杜云章
+ * @date 2019-06-11 18:23
  */
 @RestController
 @RequestMapping("/usrTable")
@@ -21,7 +20,7 @@ public class UsrTableController {
 
     private static Logger log = LoggerFactory.getLogger(UsrTableController.class);
 
-    @Reference(version = "1.0.0")
+    @Reference(version = "1.0.0",group = "login")
     private UsrTableService usrTableService;
 
     @PostMapping("/login")

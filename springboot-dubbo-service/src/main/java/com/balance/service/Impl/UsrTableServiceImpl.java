@@ -1,18 +1,18 @@
 package com.balance.service.Impl;
 
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.balance.dao.UsrTableDao;
 import com.balance.model.UsrTable;
 import com.balance.model.UsrTableExample;
 import com.balance.service.UsrTableService;
 import com.balance.util.MapBeanUtil;
+import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -27,18 +27,18 @@ public class UsrTableServiceImpl implements UsrTableService {
 
     private static Logger log = LoggerFactory.getLogger(UsrTableServiceImpl.class);
 
-    @Autowired
+    @Resource
     UsrTableDao usrTableDao;
 
-    @Autowired
+    @Resource
     RedisTemplate<String, String> redisTemplate;
 
     /**
-     * @Author: 杜云章
-     * @description: 校验登录结果
-     * @parm: map[account, password]
-     * @return: boolean true 表示校验成功 false表示校验失败
-     * @Date: 2019/6/11 - 9:16
+     * 校验登录结果
+     * @author 杜云章
+     * @param map map[account, password]
+     * @return boolean true 表示校验成功 false表示校验失败
+     * @date 2019/6/11 - 9:16
      */
     private boolean checkLogin(Map<String, Object> map) {
         String account = (String) map.get("account");
